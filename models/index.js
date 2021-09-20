@@ -15,19 +15,13 @@ Product.belongsTo(Category, {
 });
 
 Product.belongsToMany(Tag, {
-  through: {
-    model: "product_tag",
-    unique: false,
-  },
-  as: "product_id",
+  through: ProductTag,
+  foreignKey: 'product_id'
 });
 
 Tag.belongsToMany(Product, {
-  through: {
-    model: "product_tag",
-    unique: false,
-  },
-  as: "tag_id",
+  through: ProductTag,
+  foreignKey: 'tag_id'
 })
 
 // Export to be used else where in the app
