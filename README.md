@@ -41,7 +41,7 @@ When ready use **'npm start'** into the command line to run.
 ![SQL](https://img.shields.io/static/v1?style=for-the-badge&message=SQL&color=222222&label=)
 
 ## Links
-![App Screenshot](./assets/dataflow-diagram.JPEG)<br>
+![Data flow screenshot](./assets/dataflow-diagram.jpeg)<br>
 [Walkthrough Video](https://youtu.be/IH0zQNwWz6I) <br>
 [GitHub](https://github.com/niklasertle/nje-ecommerce-backend)
 
