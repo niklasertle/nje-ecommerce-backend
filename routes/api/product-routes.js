@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { Product, Category, Tag, ProductTag } = require("../../models");
 
-// get all products
+// Get all products
 router.get("/", async (req, res) => {
   try {
     const productData = await Product.findAll({
@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// get one product
+// Get a product by id
 router.get("/:id", async (req, res) => {
   try {
     const productData = await Product.findByPk(req.params.id, {
@@ -33,7 +33,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// create new product
+// Create a new product
 router.post("/", (req, res) => {
   /* req.body should look like this...
     {
@@ -65,7 +65,7 @@ router.post("/", (req, res) => {
     });
 });
 
-// update product
+// Update a product
 router.put("/:id", (req, res) => {
   // update product data
   Product.update(req.body, {
@@ -107,7 +107,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
-// Delete a product based on ID
+// Delete a product by ID
 router.delete("/:id", async (req, res) => {
   try {
     await Product.destroy({ where: { id: req.params.id } });

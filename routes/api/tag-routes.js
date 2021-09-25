@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
 
-// TGet all tags
+// Get all tags
 router.get('/', async (req, res) => {
   try {
     const tagData = await Tag.findAll({
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Get one tage by ID
+// Get a tag by ID
 router.get('/:id', async (req, res) => {
   try {
     const tagData = await Tag.findByPk(req.params.id, {
